@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushim Welfare - Bringing Hope to Nepal's Children</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #7ec8e3;">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="#">Khushim Welfare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#mission">Mission</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#impact">Impact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#donate">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <!-- Hero Section -->
+<section class="hero" id="home">
+  <!-- background layers -->
+  <div class="bg"></div>
+  <div class="bg"></div>
+
+  <!-- content -->
+  <div class="hero-content">
+    <h1>Every Child Deserves Hope</h1>
+    <p>Join us in transforming lives across Nepal, one smile at a time. Together, we can build a brighter future for children in need.</p>
+    <a href="#donate" class="cta-button">Donate Now</a>
+  </div>
+</section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <p>Khushim Welfare is dedicated to bringing joy, education, and essential resources to underprivileged children across Nepal. We believe that every child, regardless of their circumstances, deserves access to basic necessities, quality education, and the chance to dream big.</p>
+                <p>Through community partnerships and grassroots initiatives, we work tirelessly to break the cycle of poverty and create lasting positive change in rural and urban communities throughout Nepal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Our Impact So Far</h2>
+            <div class="impact-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Children Helped</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">Communities Reached</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Families Supported</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Years of Service</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@khushimwelfare.org</p>
+                    <p>Phone: +977-XXX-XXXX</p>
+                    <p>Kathmandu, Nepal</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Our Journey</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">Twitter</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Involved</h3>
+                    <p><a href="#">Volunteer</a></p>
+                    <p><a href="#">Partner with Us</a></p>
+                    <p><a href="#">Newsletter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Khushim Welfare. All rights reserved. | Making a difference in Nepal, one child at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const images = [
+        "https://images.unsplash.com/photo-1542865684-6fbe8cb45ca8?q=80&w=1027&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1622305323334-632b40145907?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/flagged/photo-1564308501991-072c27259ba4?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ];
+
+
+        const bgs = document.querySelectorAll('.hero .bg');
+        let i = 0;
+
+        function changeBackground() {
+        const nextImage = images[i % images.length];
+        const current = bgs[i % 2];
+        const previous = bgs[(i + 1) % 2];
+
+        current.style.backgroundImage = `url('${nextImage}')`;
+        current.style.opacity = 1;
+        previous.style.opacity = 0;
+
+        i++;
+        }
+
+        setInterval(changeBackground, 5000); // change every 5s
+        changeBackground(); // initial
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+
+        // Animate stats on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const finalValue = parseInt(stat.textContent);
+                        let currentValue = 0;
+                        const increment = finalValue / 50;
+                        const timer = setInterval(() => {
+                            currentValue += increment;
+                            if (currentValue >= finalValue) {
+                                currentValue = finalValue;
+                                clearInterval(timer);
+                            }
+                            stat.textContent = Math.floor(currentValue) + (stat.textContent.includes('+') ? '+' : '');
+                        }, 30);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe the impact section
+        const impactSection = document.querySelector('.impact');
+        if (impactSection) {
+            statsObserver.observe(impactSection);
+        }
+    </script>
+</body>
+</html>
